@@ -6,7 +6,13 @@ import java.lang.reflect.Field;
 import java.util.Properties;
 
 public class Injector {
-    
+    /**
+     * Осуществляет поиск полей, помеченных
+     * этой аннотацией, и инициализацию этих полей
+     * экземплярами классов
+     * @param obj объект класса
+     * @return ссылка на obj
+     */
     public static Object inject(Object obj){
         Properties properties = new Properties();
         String pathProperties = "src/main/resources/injector.properties";
